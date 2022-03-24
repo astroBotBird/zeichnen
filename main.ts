@@ -9,7 +9,7 @@ input.onButtonPressed(Button.A, function () {
 input.onGesture(Gesture.Shake, function () {
     basic.setLedColor(0xff0000)
     basic.clearScreen()
-    sprite = 0
+    spieler_x = 0
     spieler_y = 0
     led.plot(spieler_x, spieler_y)
     basic.setLedColor(0x00ff00)
@@ -30,12 +30,11 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 let spriteY = 0
-let sprite = 0
 let richtung = 0
 let spieler_y = 0
 let spieler_x = 0
 basic.setLedColor(0xff0000)
-music.playMelody("B A G A G F A C5 ", 200)
+music.playMelody("B A G A G F A C5 ", 344)
 spieler_x = 0
 spieler_y = 0
 richtung = 1
