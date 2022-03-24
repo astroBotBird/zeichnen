@@ -1,8 +1,8 @@
 input.onButtonPressed(Button.A, function () {
     spieler_x += richtung
     led.plot(spieler_x, spieler_y)
-    if (spieler_x == 4) {
-        spieler_x = 0
+    if (spieler_x >= 4) {
+        spieler_x = 4
         led.plot(spieler_x, spieler_y)
     }
 })
@@ -12,6 +12,7 @@ input.onGesture(Gesture.Shake, function () {
     spieler_x = 0
     spieler_y = 0
     led.plot(spieler_x, spieler_y)
+    richtung = 1
     basic.setLedColor(0x00ff00)
 })
 input.onButtonPressed(Button.AB, function () {
@@ -24,8 +25,8 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     spieler_y += richtung
     led.plot(spieler_x, spieler_y)
-    if (spieler_y == 4) {
-        spriteY = 0
+    if (spieler_y >= 4) {
+        spriteY = 4
         led.plot(spieler_x, spieler_y)
     }
 })
